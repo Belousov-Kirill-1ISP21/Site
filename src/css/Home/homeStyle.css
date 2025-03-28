@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Verdana';
+    src: url('../../assets/fonts/Verdana.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Verdana';
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
