@@ -6,7 +6,7 @@ export const SignInPage = (props)=>{
 
     return <div class="wrapper">
 
-        <AuthHeader/>
+        <AuthHeader isSignUp={false}/>
         <SignInForm/>
 
     </div>

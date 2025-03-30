@@ -1,12 +1,18 @@
 import './css/appStyle.css';
-import { HomePage } from "./pages/Home";
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './Routes'; 
 
 function App() {
+
   return (
+    
     <div className="App">
 
-      <HomePage /> 
-      
+      <Router>
+        <Routes />
+      </Router>
+
     </div>
   );
 }

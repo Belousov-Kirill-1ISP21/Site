@@ -5,8 +5,8 @@ import { SignUpForm } from '../components/SignUp/SignUpForm'
 export const SignUpPage = (props)=>{
 
     return <div class="wrapper">
-
-        <AuthHeader/>
+   
+        <AuthHeader isSignUp={true}/>
         <SignUpForm/>
 
     </div>

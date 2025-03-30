@@ -1,4 +1,5 @@
 import '../../../css/Home/CatalogBlock/CatalogCardStyle.css';
+import { Link } from 'react-router-dom';
 
 export const CatalogCard =(props)=>{
     const {CatalogBlockCardH1, CatalogBlockCardText} = props
@@ -11,7 +12,9 @@ export const CatalogCard =(props)=>{
             <p class="CatalogBlockCardText">от </p> <p class="CatalogBlockCardTextInText">{CatalogBlockCardText}</p>
         </div> 
         <div class="CatalogBlockCardContainer">
-            <button class="CatalogBlockCardButton">Заказать</button>
+            <Link to="/Catalog" class="CatalogBlockCardContainerLink">
+                <button class="CatalogBlockCardButton">Заказать</button>
+            </Link>
         </div>
 
     </div>

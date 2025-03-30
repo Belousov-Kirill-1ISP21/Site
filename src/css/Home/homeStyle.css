@@ -8,6 +8,10 @@
     font-family: 'Verdana';
 }
 
+a {
+    color: inherit; 
+}
+
 html, body {
     margin: 0;
     padding: 0;

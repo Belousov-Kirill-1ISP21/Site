@@ -30,6 +30,10 @@
     align-items: center;
 }
 
+.FooterButtonContainerLink{
+    text-decoration: none;
+}
+
 .FooterButton{
     width: auto;
     height: 4vh;

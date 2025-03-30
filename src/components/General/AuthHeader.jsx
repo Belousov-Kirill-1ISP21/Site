@@ -1,22 +1,37 @@
 import '../../css/General/AuthHeaderStyle.css';
+import { Link } from 'react-router-dom';
 
 export const AuthHeader =(props)=>{
-    return <div class="">
-        {/* 
+    const {isSignUp} = props;
 
-        <div>        
-            <button>Главная</button>
-        </div>
+    return <div class="AuthHeader">
+
+        <div class="AuthHeaderContainer">   
+
+            <Link to="/" class="AuthHeaderLogoButtonLink">
+                <button class="AuthHeaderLogoButton">Главная</button>
+            </Link>
         
-        <div>
-            <button>Авторизация</button>
-
-            ИЛИ
-
-            <button>Регистрация</button>
+            {(() => {
+                if (isSignUp) {
+                    return (
+                        <Link to="/SignIn" className="AuthHeaderRightLink">
+                            <button className="AuthHeaderRightButton">Авторизация</button>
+                        </Link>
+                    );
+                } 
+                else {
+                    return (
+                        <>
+                            <Link to="/SignUp" class="AuthHeaderRightLink">
+                                <button class="AuthHeaderRightButton">Регистрация</button>
+                            </Link> 
+                        </>
+                    );
+                }
+            })()}
+            
         </div>
-
-        */}
         
     </div>
 }

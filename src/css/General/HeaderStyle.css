@@ -19,6 +19,11 @@
     font-size: 4vh;
     text-align: left;
     margin-left: 4%;
+    outline: none;
+}
+
+.HeaderLeftLink{
+    text-decoration: none;
 }
 
 .HeaderLeftButtonContainer {
@@ -28,6 +33,10 @@
     display: flex; 
     align-items: center; 
     justify-content: center;
+}
+
+.HeaderLeftButtonContainerLink{
+    text-decoration: none;
 }
 
 .HeaderLeftButton{
@@ -68,6 +77,10 @@
     width: 25%;
     height: 100%;
     display: inline-block;
+}
+
+.HeaderRightLink{
+    text-decoration: none;
 }
 
 .HeaderRightButton{

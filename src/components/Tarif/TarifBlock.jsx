@@ -1,20 +1,30 @@
 import '../../css/Tarif/TarifBlockStyle.css';
+import { Link } from 'react-router-dom';
+
 export const TarifBlock =(props)=>{
-    return <div class="">
+    const {TarifBlockH1, TarifBlockImg, TarifBlockText, TarifBlockPrice } = props
+    return <div class="TarifBlock">
+
+        <div class="TarifBlockH1Container">
+            <h1 class="TarifBlockH1">{TarifBlockH1}</h1>
+        </div>
+
+        <div class="TarifBlockInfoContainer">
+            <div class="TarifBlockInfoImgContainer">
+                <img src={TarifBlockImg} class="TarifBlockImg"/> 
+            </div>
+            <div class="TarifBlockInfoTextContainer">
+                <p class="TarifBlockText">{TarifBlockText}</p>
+                <p class="TarifBlockPrice">{TarifBlockPrice}</p> <p class="TarifBlockText">в зависимости от условий.</p>
+            </div>
+        </div>
         
-        {/* 
-
-            <h1>ОСАГО</h1>
-            <img> //Tarif
-
-            <p>ОСАГО — обязательный вид страхования по закону, который обязательно требуется при покупке нового автомобиля. 
-            Благодаря ОСАГО не нужно возмещать ущерб пострадавшим в ДТП самостоятельно.
-             Компенсация за ущерб имуществу или здоровью третьих лиц производится страховой компанией.</p>
-
-            <p><p>Цена: От 2890₽,</p> в зависимости от условий.</p>
-            <button></button>
-
-        */}
+        <div class="TarifBlockButtonContainer">
+            <Link to="/Order" class="TarifBlockLink">
+                <button class="TarifBlockButton">Расчитать цену</button>
+            </Link>
+        </div>
         
     </div>
+
 }

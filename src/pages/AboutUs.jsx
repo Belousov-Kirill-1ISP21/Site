@@ -4,7 +4,7 @@ import { AboutTitleBlock } from '../components/AboutUs/AboutTitleBlock'
 import { AboutMainBlock } from '../components/AboutUs/AboutMainBlock/AboutMainBlock'
 import { Footer } from '../components/General/Footer'
 
-export const AbouUsPage = (props)=>{
+export const AboutUsPage = (props)=>{
 
     return <div class="wrapper">
 

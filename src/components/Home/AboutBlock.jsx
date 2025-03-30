@@ -1,5 +1,6 @@
 import AboutBlockImg from "../../assets/Home/AboutBlock.png";
 import '../../css/Home/AboutBlockStyle.css';
+import { Link } from 'react-router-dom';
 
 export const AboutBlock =(props)=>{
     return <div class="AboutBlock">
@@ -11,7 +12,9 @@ export const AboutBlock =(props)=>{
             <p class="AboutBlockText">Юристы компании «Юридическое Бюро 812» уже долгие годы ведут успешную практику в предоставлении услуг 
             физическим и юридическим лицам в различных правовых сферах, решая вопросы любой сложности. </p>
 
-            <button class="AboutBlockButton">Подробнее</button>
+            <Link to="/AboutUs" class="AboutBlockLink">
+                <button class="AboutBlockButton">Подробнее</button>
+            </Link>
 
         </div>
 

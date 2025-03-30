@@ -1,32 +1,29 @@
 import '../../../css/AboutUs/AboutMainBlock/AboutBlockStyle.css';
 export const AboutBlock =(props)=>{
-    return <div class="">
 
-        {/* 
-        
-            <div>
-                <h1>Надёжность</h1>
+    const {AboutBlockH1, AboutBlockText, AboutBlockImg, isImgLeft} = props;
+    return <div class="AboutBlock">
 
-                <p>Нашу надежность и финансовую устойчивость подтверждают рейтинги ведущих рейтинговых агентств: 
-                ruАAA по шкале «Эксперт РА», ААА |ru| по шкале «Национального Рейтингового Агентства» и AAA.ru по шкале «Национальные Кредитные Рейтинги» (НКР).</p>
-
-                <img> //AboutBlock1
-            </div>
-
-            ИЛИ
-
-            <div>
-                <img> //AboutBlock2
-
-                <h1>Забота о клиентах</h1>
-
-                <p> Наша работа – ежедневная забота о вас, наших клиентах! Развиваем дистанционные каналы, чтобы вам было удобнее с нами. 
-                Работаем над тем, чтобы наши продукты создавали для вас чувство уверенности. Оперативно отвечаем во всех каналах коммуникации.</p>
-
-            </div>
-            
-
-        */}
+        {(() => {
+                if (isImgLeft) {
+                    return (
+                        <div class="AboutBlockContainer">
+                            <img src={AboutBlockImg} class="AboutBlockImg"/> 
+                            <h1 class="AboutBlockH1">{AboutBlockH1}</h1>
+                            <p class="AboutBlockText">{AboutBlockText}</p>
+                        </div>
+                    );
+                } 
+                else {
+                    return (
+                        <div class="AboutBlockContainer">
+                            <h1 class="AboutBlockH1">{AboutBlockH1}</h1>
+                            <p class="AboutBlockText">{AboutBlockText}</p>
+                            <img src={AboutBlockImg} class="AboutBlockImg"/> 
+                        </div>
+                    );
+                }
+            })()}
         
     </div>
 }
