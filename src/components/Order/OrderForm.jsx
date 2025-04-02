@@ -1,40 +1,48 @@
-import '../../css/Order/OrderFormStyle.css';
+import styles from '../../css/Order/OrderFormStyle.module.css';
 import { Link } from 'react-router-dom';
 
 export const OrderForm =(props)=>{
-    return <div class="OrderForm">
+    return <div className={styles.OrderForm}>
 
-            <div class="OrderFormH1Container">
-                <h1 class="OrderFormH1">Заполните форму для оформления тарифа</h1>
+            <div className={styles.OrderFormH1Container}>
+                <h1 className={styles.OrderFormH1}>Заполните форму для оформления тарифа</h1>
             </div>
 
-            <form class="OrderFormForm">
+            <form className={styles.OrderFormForm}>
 
-                <div class="OrderFormFormInputContainer">
-                    <h2 class="OrderFormFormH2">Гражданство</h2>
-                    <input class="OrderFormFormInput"/>
+                <div className={styles.OrderFormFormInputContainer}>
+                    <div className={styles.OrderFormFormH2Container}>
+                        <h2 className={styles.OrderFormFormH2}>Гражданство</h2>
+                    </div>
+                    <input className={styles.OrderFormFormInput} placeholder='Россия'/>
                 </div>
 
-                <div class="OrderFormFormInputContainer">
-                    <h2 class="OrderFormFormH2">Документ, удоставеряющий личность</h2>
-                    <input class="OrderFormFormInput"/>
-                    <input class="OrderFormFormInput"/>
-                    <input class="OrderFormFormInput"/>
+                <div className={styles.OrderFormFormPassportInputContainer}>
+                    <div className={styles.OrderFormFormH2Container}>
+                        <h2 className={styles.OrderFormFormH2}>Документ, удоставеряющий личность</h2>
+                    </div>
+                    <input className={styles.OrderFormFormPassportInput} placeholder='Тип документа'/>
+                    <input className={styles.OrderFormFormPassportInput} placeholder='Серия'/>
+                    <input className={styles.OrderFormFormPassportInput} placeholder='Номер'/>
                 </div>
 
-                <div class="OrderFormFormInputContainer">
-                    <h2 class="OrderFormFormH2">Орган, выдавший документ</h2>
-                    <input class="OrderFormFormInput"/>
+                <div className={styles.OrderFormFormInputContainer}>
+                    <div className={styles.OrderFormFormH2Container}>
+                        <h2 className={styles.OrderFormFormH2}>Орган, выдавший документ</h2>
+                    </div>
+                    <input className={styles.OrderFormFormInput} placeholder='Кем выдан'/>
                 </div>
 
-                <div class="OrderFormFormInputContainer">
-                    <h2 class="OrderFormFormH2">Дата выдачи</h2>
-                    <input class="OrderFormFormInput"/>
+                <div className={styles.OrderFormFormInputContainer}>
+                    <div className={styles.OrderFormFormH2Container}>
+                        <h2 className={styles.OrderFormFormH2}>Дата выдачи</h2>
+                    </div>
+                    <input className={styles.OrderFormFormInput} placeholder='дд.мм.гггг'/>
                 </div>
 
-                <div class="OrderFormFormButtonContainer">
-                    <Link to="/Profile" class="OrderFormFormLink">
-                        <button class="OrderFormFormButton">Заказать</button>
+                <div className={styles.OrderFormFormButtonContainer}>
+                    <Link to="/Profile" className={styles.OrderFormFormLink}>
+                        <button className={styles.OrderFormFormButton}>Заказать</button>
                     </Link> 
                 </div>
 

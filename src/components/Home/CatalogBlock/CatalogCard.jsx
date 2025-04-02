@@ -1,19 +1,19 @@
-import '../../../css/Home/CatalogBlock/CatalogCardStyle.css';
+import styles from '../../../css/Home/CatalogBlock/CatalogCardStyle.module.css';
 import { Link } from 'react-router-dom';
 
 export const CatalogCard =(props)=>{
     const {CatalogBlockCardH1, CatalogBlockCardText} = props
-    return <div class="CatalogBlockCard">
+    return <div className={styles.CatalogBlockCard}>
 
-        <div class="CatalogBlockCardContainer">
-            <h1 class="CatalogBlockCardH1">{CatalogBlockCardH1}</h1>
+        <div className={styles.CatalogBlockCardContainer}>
+            <h1 className={styles.CatalogBlockCardH1}>{CatalogBlockCardH1}</h1>
         </div>
-        <div class="CatalogBlockCardContainer">
-            <p class="CatalogBlockCardText">от </p> <p class="CatalogBlockCardTextInText">{CatalogBlockCardText}</p>
+        <div className={styles.CatalogBlockCardContainer}>
+            <p className={styles.CatalogBlockCardText}>от </p> <p className={styles.CatalogBlockCardTextInText}>{CatalogBlockCardText}</p>
         </div> 
-        <div class="CatalogBlockCardContainer">
-            <Link to="/Catalog" class="CatalogBlockCardContainerLink">
-                <button class="CatalogBlockCardButton">Заказать</button>
+        <div className={styles.CatalogBlockCardContainer}>
+            <Link to="/Catalog" className={styles.CatalogBlockCardContainerLink}>
+                <button className={styles.CatalogBlockCardButton}>Заказать</button>
             </Link>
         </div>
 

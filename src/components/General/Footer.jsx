@@ -2,31 +2,31 @@ import FacebookImg from "../../assets/Footer/Facebook.png";
 import InstagramImg from "../../assets/Footer/Instagram.png";
 import TwitterImg from "../../assets/Footer/Twitter.png";
 import VKImg from "../../assets/Footer/VK.png";
-import '../../css/General/FooterStyle.css';
+import styles from '../../css/General/FooterStyle.module.css';
 import { Link } from 'react-router-dom';
 import { scrollToElement } from "../../functions/scrollToElement";
 
 export const Footer =(props)=>{
 
-    return <div class="Footer"> 
+    return <div className={styles.Footer}> 
 
-        <div class="FooterImgContainer">
-            <img  src={FacebookImg} class="FooterImg"/>
-            <img src={InstagramImg} class="FooterImg"/>
-            <img src={TwitterImg} class="FooterImg"/> 
-            <img src={VKImg} class="FooterImg"/>
+        <div className={styles.FooterImgContainer}>
+            <img  src={FacebookImg} className={styles.FooterImg}/>
+            <img src={InstagramImg} className={styles.FooterImg}/>
+            <img src={TwitterImg} className={styles.FooterImg}/> 
+            <img src={VKImg} className={styles.FooterImg}/>
         </div>
 
-        <div class="FooterButtonContainer">
-            <button class="FooterButton">
-                <Link to="/AboutUs" class="FooterButtonContainerLink">О компании</Link>
+        <div className={styles.FooterButtonContainer}>
+            <button className={styles.FooterButton}>
+                <Link to="/AboutUs" className={styles.FooterButtonContainerLink}>О компании</Link>
             </button>
 
-            <button class="FooterButton">Помощь</button>
-            <button class="FooterButton" onClick={() => scrollToElement("Header")}>Контакты</button>
+            <button className={styles.FooterButton}>Помощь</button>
+            <button className={styles.FooterButton} onClick={() => scrollToElement("Header")}>Контакты</button>
         </div>
 
-        <p class="FooterText">©2025 Страхование онлаин</p>
+        <p className={styles.FooterText}>©2025 Страхование онлаин</p>
 
     </div>
         

@@ -1,4 +1,4 @@
-import '../css/Profile/profileStyle.css'
+import styles from  '../css/Profile/profileStyle.module.css'
 import { SidePanel } from '../components/Profile/SidePanel/SidePanel'
 import { MainPanel } from '../components/Profile/MainPanel/MainPanel'
 
@@ -12,25 +12,29 @@ const MainPanelProps = [
 
 export const ProfilePage = (props)=>{
 
-    return <div class="wrapper">
+    return <div className={styles.wrapper}>
 
-        <div class="SidePanelContainer">
+        <div className={styles.PanelsContainer}>
 
-            {SidePanelProps.map((SidePanelInfo,key)=><SidePanel 
-                                                key={key}
-                                                SidePanelHeadH1={SidePanelInfo.SidePanelHeadH1} 
-                                                SidePanelHeadText={SidePanelInfo.SidePanelHeadText}
-                                            />)}
+            <div className={styles.SidePanelContainer}>
 
-        </div>
+                {SidePanelProps.map((SidePanelInfo,key)=><SidePanel 
+                                                    key={key}
+                                                    SidePanelHeadH1={SidePanelInfo.SidePanelHeadH1} 
+                                                    SidePanelHeadText={SidePanelInfo.SidePanelHeadText}
+                                                />)}
 
-        <div class="SidePanelContainer">
+            </div>
 
-            {MainPanelProps.map((MainPanelInfo,key)=><MainPanel 
-                                                key={key}
-                                                MainPanelHeadH1={MainPanelInfo.MainPanelHeadH1} 
-                                                MainPanelHeadText={MainPanelInfo.MainPanelHeadText}
-                                            />)}
+            <div className={styles.MainPanelContainer}>
+
+                {MainPanelProps.map((MainPanelInfo,key)=><MainPanel 
+                                                    key={key}
+                                                    MainPanelHeadH1={MainPanelInfo.MainPanelHeadH1} 
+                                                    MainPanelHeadText={MainPanelInfo.MainPanelHeadText}
+                                                />)}
+
+            </div>
 
         </div>
 

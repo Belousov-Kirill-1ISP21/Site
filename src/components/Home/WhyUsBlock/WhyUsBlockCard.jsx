@@ -1,13 +1,13 @@
 import ProcentImg from "../../../assets/Home/Procent.png";
-import '../../../css/Home/WhyUsBlock/WhyUsBlockCardStyle.css';
+import styles from '../../../css/Home/WhyUsBlock/WhyUsBlockCardStyle.module.css';
 
 export const WhyUsBlockCard =(props)=>{
     const {WhyUsBlockCardH1, WhyUsBlockCardText} = props
-    return <div class="WhyUsBlockCard">
+    return <div className={styles.WhyUsBlockCard}>
 
-        <img src={ProcentImg} class="WhyUsBlockCardImg"/> 
-        <h1 class="WhyUsBlockCardH1">{WhyUsBlockCardH1}</h1>
-        <p class="WhyUsBlockCardText">{WhyUsBlockCardText}</p>
+        <img src={ProcentImg} className={styles.WhyUsBlockCardImg}/> 
+        <h1 className={styles.WhyUsBlockCardH1}>{WhyUsBlockCardH1}</h1>
+        <p className={styles.WhyUsBlockCardText}>{WhyUsBlockCardText}</p>
 
     </div>
 }

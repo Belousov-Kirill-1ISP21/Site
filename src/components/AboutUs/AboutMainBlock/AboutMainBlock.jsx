@@ -1,4 +1,4 @@
-import '../../../css/AboutUs/AboutMainBlock/AboutMainBlockStyle.css';
+import styles from '../../../css/AboutUs/AboutMainBlock/AboutMainBlockStyle.module.css';
 import { AboutBlock } from './AboutBlock'
 import AboutBlock1Img from "../../../assets/AboutUs/AboutBlock1.png";
 import AboutBlock2Img from "../../../assets/AboutUs/AboutBlock2.png";
@@ -15,13 +15,13 @@ const AboutBlockProps = [
 
 export const AboutMainBlock =(props)=>{
     
-    return <div class="AboutMainBlock">
+    return <div className={styles.AboutMainBlock}>
 
-        <div class="AboutMainBlockH1Container">
-            <h1 class="AboutMainBlockH1">О нашей компании</h1>
+        <div className={styles.AboutMainBlockH1Container}>
+            <h1 className={styles.AboutMainBlockH1}>О нашей компании</h1>
         </div>
 
-        <div class="AboutMainBlockBlockContainer">
+        <div className={styles.AboutMainBlockBlockContainer}>
             {AboutBlockProps.map((AboutBlockInfo,key)=><AboutBlock 
                                                 key={key}
                                                 AboutBlockH1={AboutBlockInfo.AboutBlockH1} 

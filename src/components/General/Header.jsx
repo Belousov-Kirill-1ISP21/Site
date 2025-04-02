@@ -1,49 +1,49 @@
-import '../../css/General/HeaderStyle.css';
+import styles from '../../css/General/HeaderStyle.module.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 export const Header =(props)=>{
     const {isAuthenticated} = props;
 
-    return <div class="Header" id = "Header">
+    return <div className={styles.Header} id = "Header">
         
-        <div class="HeaderLeft">
+        <div className={styles.HeaderLeft}>
             
-            <button class="HeaderLogoButton">
-                <Link to="/" class="HeaderLeftLink">Страхование онлаин</Link>
+            <button className={styles.HeaderLogoButton}>
+                <Link to="/" className={styles.HeaderLeftLink}>Страхование онлаин</Link>
             </button>
             
-            <div class="HeaderLeftButtonContainer">
+            <div className={styles.HeaderLeftButtonContainer}>
             
-                <button class="HeaderLeftButton">
-                    <Link to="/AboutUs" class="HeaderLeftButtonContainerLink">О компании</Link>
+                <button className={styles.HeaderLeftButton}>
+                    <Link to="/AboutUs" className={styles.HeaderLeftButtonContainerLink}>О компании</Link>
                 </button>
            
-                <button class="HeaderLeftButton">Помощь</button>
-                <button class="HeaderLeftContactButton">
-                    <p class="HeaderLeftContactButtonText">Контакты: </p> <p class="HeaderLeftContactButtonTextInText">+7 495 123-45-67</p> 
+                <button className={styles.HeaderLeftButton}>Помощь</button>
+                <button className={styles.HeaderLeftContactButton}>
+                    <p className={styles.HeaderLeftContactButtonText}>Контакты: </p> <p className={styles.HeaderLeftContactButtonTextInText}>+7 495 123-45-67</p> 
                 </button>
             </div>
         </div>
 
-        <div class="HeaderRight">
+        <div className={styles.HeaderRight}>
             {(() => {
                 if (isAuthenticated) {
                     return (
-                        <Link to="/Profile" className="HeaderRightLink">
-                            <button className="HeaderRightButton">Личный кабинет</button>
+                        <Link to="/Profile" className={styles.HeaderRightLink}>
+                            <button className={styles.HeaderRightButton}>Личный кабинет</button>
                         </Link>
                     );
                 } 
                 else {
                     return (
                         <>
-                            <Link to="/SignUp" class="HeaderRightLink">
-                                <button class="HeaderRightButton">Регистрация</button>
+                            <Link to="/SignUp" className={styles.HeaderRightLink}>
+                                <button className={styles.HeaderRightButton}>Регистрация</button>
                             </Link>
                             
-                            <Link to="/SignIn" class="HeaderRightLink">
-                                <button class="HeaderRightButton">Авторизация</button>
+                            <Link to="/SignIn" className={styles.HeaderRightLink}>
+                                <button className={styles.HeaderRightButton}>Авторизация</button>
                             </Link> 
                         </>
                     );

@@ -1,22 +1,22 @@
 import TitleBlockImg from "../../assets/Home/TitleBlock.png";
 import ArrowImg from "../../assets/Home/Arrow.png";
-import '../../css/Home/TitleBlockStyle.css';
+import styles from '../../css/Home/TitleBlockStyle.module.css';
 import { Link } from 'react-router-dom';
 
 export const TitleBlock =(props)=>{
-    return <div class="TitleBlock">
+    return <div className={styles.TitleBlock}>
     
-        <img src={TitleBlockImg} class="TitleBlockImg"/> 
-        <div class="TitleBlockContainer">
+        <img src={TitleBlockImg} className={styles.TitleBlockImg}/> 
+        <div className={styles.TitleBlockContainer}>
 
-            <h1 class="TitleBlockH1">Страхование вашего имущества и здоровья</h1>
-            <p class="TitleBlockText">А также страхование финансов и путешествий</p>
+            <h1 className={styles.TitleBlockH1}>Страхование вашего имущества и здоровья</h1>
+            <p className={styles.TitleBlockText}>А также страхование финансов и путешествий</p>
             
-            <Link to="/Catalog" class="TitleBlockLink">
-                <button class="TitleBlockButton">
+            <Link to="/Catalog" className={styles.TitleBlockLink}>
+                <button className={styles.TitleBlockButton}>
                     
-                    <p class="TitleBlockButtonText">Застраховать</p>
-                    <img src={ArrowImg} class="TitleBlockButtonImg"/>
+                    <p className={styles.TitleBlockButtonText}>Застраховать</p>
+                    <img src={ArrowImg} className={styles.TitleBlockButtonImg}/>
                     
                 </button>
             </Link>

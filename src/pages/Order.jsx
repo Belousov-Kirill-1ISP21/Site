@@ -1,13 +1,20 @@
-import '../css/Order/orderStyle.css'
+import styles from '../css/Order/orderStyle.module.css'
 import { Header } from '../components/General/Header'
 import { OrderForm } from '../components/Order/OrderForm'
+import { SideBackground } from '../components/General/SideBackground'
 
 export const OrderPage = (props)=>{
 
-    return <div class="wrapper">
+    return <div className={styles.wrapper}>
 
-        <Header/>
-        <OrderForm/>
+        <div className={styles.SideBackgroundContainer}>
+            <SideBackground isDark={false}/>
+        </div>
+
+        <div className={styles.main}>
+            <Header/>
+            <OrderForm/>
+        </div>
         
     </div>
 }

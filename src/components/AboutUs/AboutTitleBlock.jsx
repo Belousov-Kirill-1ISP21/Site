@@ -1,9 +1,9 @@
-import '../../css/AboutUs/AboutTitleBlockStyle.css';
+import styles from '../../css/AboutUs/AboutTitleBlockStyle.module.css';
 import AboutTitle from '../../assets/AboutUs/AboutTitle.png'
 export const AboutTitleBlock =(props)=>{
-    return <div class="AboutTitleBlock">
+    return <div className={styles.AboutTitleBlock}>
 
-        <img src={AboutTitle} class="AboutTitleBlockImg"/> 
+        <img src={AboutTitle} className={styles.AboutTitleBlockImg}/> 
   
     </div>
 }

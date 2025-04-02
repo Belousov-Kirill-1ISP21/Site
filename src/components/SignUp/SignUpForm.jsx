@@ -1,24 +1,21 @@
-import '../../css/SignUp/SignUpFormStyle.css';
+import styles from '../../css/SignUp/SignUpFormStyle.module.css';
 import { Link } from 'react-router-dom';
 export const SignUpForm =(props)=>{
-    return <div class="SignUpForm">
+    return <div className={styles.SignUpForm}>
 
-            <div class="SignUpFormH1Container">
-                <h1 class="SignInFormH1">Регистрация</h1>
-            </div>
-
-            <form class="SignUpFormForm">
-                <input class="SignUpFormFormInput"/>
-                <input class="SignUpFormFormInput"/>
-                <input class="SignUpFormFormInput"/>
-                <input class="SignUpFormFormInput"/>
-                <input class="SignUpFormFormInput"/>
-                <input class="SignUpFormFormInput"/>
-                <input class="SignUpFormFormInput"/>
-                <Link to="/Profile" class="SignUpFormFormLink">
-                    <button class="SignUpFormFormButton">Зарегистрироваться</button>
+            <form className={styles.SignUpFormForm}>
+                <h1 className={styles.SignInFormH1}>Регистрация</h1>
+                <input className={styles.SignUpFormFormInput} placeholder='Фамилия'/>
+                <input className={styles.SignUpFormFormInput} placeholder='Имя'/>
+                <input className={styles.SignUpFormFormInput} placeholder='Отчество'/>
+                <input className={styles.SignUpFormFormInput} placeholder='+7 (000) 000-0000'/>
+                <input className={styles.SignUpFormFormInput} placeholder='Email'/>
+                <input className={styles.SignUpFormFormInput} placeholder='Пароль'/>
+                <input className={styles.SignUpFormFormInput} placeholder='Повторите пароль'/>
+                <Link to="/Profile" className={styles.SignUpFormFormLink}>
+                    <button className={styles.SignUpFormFormButton}>Зарегистрироваться</button>
                 </Link>
-                <p class="SignUpFormFormText">By Creating an Account, it means you agree to our Privacy Policy and Terms of Service</p>
+                <p className={styles.SignUpFormFormText}>By Creating an Account, it means you agree to our Privacy Policy and Terms of Service</p>
             </form>
 
         

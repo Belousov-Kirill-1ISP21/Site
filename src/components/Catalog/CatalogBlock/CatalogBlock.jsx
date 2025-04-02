@@ -1,4 +1,4 @@
-import '../../../css/Catalog/CatalogBlock/CatalogBlockStyle.css';
+import styles from '../../../css/Catalog/CatalogBlock/CatalogBlockStyle.module.css';
 import CatalogCardImg from "../../../assets/Catalog/CatalogCard.png";
 import { CatalogCard } from './CatalogCard'
 
@@ -14,14 +14,14 @@ const CatalogCardProps = [
 ];
 
 export const CatalogBlock =(props)=>{
-    return <div class="CatalogBlock">
+    return <div className={styles.CatalogBlock}>
 
 
-            <div class="CatalogBlock">
-                <h1 class="CatalogBlockH1">Страхование здоровья</h1>
+            <div className={styles.CatalogBlockH1Container}>
+                <h1 className={styles.CatalogBlockH1}>Страхование здоровья</h1>
             </div>
 
-            <div class="CatalogBlockContainer">
+            <div className={styles.CatalogBlockContainer}>
 
                 {CatalogCardProps.map((CatalogCardInfo,key)=><CatalogCard 
                                                     key={key}

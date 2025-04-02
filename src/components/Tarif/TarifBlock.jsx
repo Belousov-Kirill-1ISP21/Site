@@ -1,27 +1,27 @@
-import '../../css/Tarif/TarifBlockStyle.css';
+import styles from '../../css/Tarif/TarifBlockStyle.module.css';
 import { Link } from 'react-router-dom';
 
 export const TarifBlock =(props)=>{
     const {TarifBlockH1, TarifBlockImg, TarifBlockText, TarifBlockPrice } = props
-    return <div class="TarifBlock">
+    return <div className={styles.TarifBlock}>
 
-        <div class="TarifBlockH1Container">
-            <h1 class="TarifBlockH1">{TarifBlockH1}</h1>
+        <div className={styles.TarifBlockH1Container}>
+            <h1 className={styles.TarifBlockH1}>{TarifBlockH1}</h1>
         </div>
 
-        <div class="TarifBlockInfoContainer">
-            <div class="TarifBlockInfoImgContainer">
-                <img src={TarifBlockImg} class="TarifBlockImg"/> 
+        <div className={styles.TarifBlockInfoContainer}>
+            <div className={styles.TarifBlockInfoImgContainer}>
+                <img src={TarifBlockImg} className={styles.TarifBlockImg}/> 
             </div>
-            <div class="TarifBlockInfoTextContainer">
-                <p class="TarifBlockText">{TarifBlockText}</p>
-                <p class="TarifBlockPrice">{TarifBlockPrice}</p> <p class="TarifBlockText">в зависимости от условий.</p>
+            <div className={styles.TarifBlockInfoTextContainer}>
+                <p className={styles.TarifBlockText}>{TarifBlockText}</p>
+                <p className={styles.TarifBlockPrice}>{TarifBlockPrice}</p> <p className={styles.TarifBlockText}>в зависимости от условий.</p>
             </div>
         </div>
         
-        <div class="TarifBlockButtonContainer">
-            <Link to="/Order" class="TarifBlockLink">
-                <button class="TarifBlockButton">Расчитать цену</button>
+        <div className={styles.TarifBlockButtonContainer}>
+            <Link to="/Order" className={styles.TarifBlockLink}>
+                <button className={styles.TarifBlockButton}>Расчитать цену</button>
             </Link>
         </div>
         

@@ -1,4 +1,4 @@
-import '../../../css/Home/WhyUsBlock/WhyUsBlockStyle.css';
+import styles from '../../../css/Home/WhyUsBlock/WhyUsBlockStyle.module.css';
 import { WhyUsBlockCard } from './WhyUsBlockCard'
 
 const WhyUsBlockCardProps = [
@@ -9,14 +9,16 @@ const WhyUsBlockCardProps = [
 ];
 
 export const WhyUsBlock =(props)=>{
-    return  <div class="WhyUsBlock">
+    return  <div className={styles.WhyUsBlock}>
         
-        <div class="WhyUsBlockHeader">
-            <h1 class="WhyUsBlockHeaderH1">Почему доверяют</h1>
-            <p class="WhyUsBlockHeaderText">Более</p> <p class="WhyUsBlockHeaderTextInText">10 000</p> <p class="WhyUsBlockHeaderText">клиентов доверили нашему агентству страхование транспортных средств</p>
+        <div className={styles.WhyUsBlockHeader}>
+            <h1 className={styles.WhyUsBlockHeaderH1}>Почему доверяют</h1>
+            <p className={styles.WhyUsBlockHeaderText}>Более</p> 
+            <p className={styles.WhyUsBlockHeaderTextInText}>10 000</p> 
+            <p className={styles.WhyUsBlockHeaderText}>клиентов доверили нашему агентству страхование транспортных средств</p>
         </div>
 
-        <div class="WhyUsBlockContainer">
+        <div className={styles.WhyUsBlockContainer}>
 
             {WhyUsBlockCardProps.map((WhyUsBlockCardInfo,key)=><WhyUsBlockCard 
                                                     key={key}

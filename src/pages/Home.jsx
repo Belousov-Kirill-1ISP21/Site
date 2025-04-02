@@ -1,4 +1,4 @@
-import '../css/Home/homeStyle.css'
+import styles from '../css/Home/homeStyle.module.css'
 import { Header } from '../components/General/Header'
 import { TitleBlock } from '../components/Home/TitleBlock'
 import { AboutBlock } from '../components/Home/AboutBlock'
@@ -8,7 +8,7 @@ import { Footer } from '../components/General/Footer'
 
 export const HomePage = (props)=>{
 
-    return <div class="wrapper">
+    return <div className={styles.wrapper}>
         
         <Header isAuthenticated={false}/>
         <TitleBlock/>

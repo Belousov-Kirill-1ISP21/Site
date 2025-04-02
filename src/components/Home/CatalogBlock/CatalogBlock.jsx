@@ -1,4 +1,4 @@
-import '../../../css/Home/CatalogBlock/CatalogBlockStyle.css';
+import styles from '../../../css/Home/CatalogBlock/CatalogBlockStyle.module.css';
 import { CatalogCard } from './CatalogCard'
 
 const CatalogBlockCardProps = [
@@ -11,14 +11,14 @@ const CatalogBlockCardProps = [
 ];
 
 export const CatalogBlock =(props)=>{
-    return <div class="CatalogBlock">
+    return <div className={styles.CatalogBlock}>
 
-        <div class="CatalogBlockHead">
-            <h1 class="CatalogBlockHeadH1">Выберите продукт</h1>
-            <p class="CatalogBlockHeadText">Подберите страховой продукт, который наилучшим образом подойдёт именно Вам</p>
+        <div className={styles.CatalogBlockHead}>
+            <h1 className={styles.CatalogBlockHeadH1}>Выберите продукт</h1>
+            <p className={styles.CatalogBlockHeadText}>Подберите страховой продукт, который наилучшим образом подойдёт именно Вам</p>
         </div>
 
-        <div class="CatalogBlockContainer">
+        <div className={styles.CatalogBlockContainer}>
 
             {CatalogBlockCardProps.map((CatalogBlockCardInfo,key)=><CatalogCard 
                                                     key={key}

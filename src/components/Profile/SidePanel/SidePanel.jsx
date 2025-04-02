@@ -1,11 +1,10 @@
-import '../../../css/Profile/SidePanel/SidePanelStyle.css'
+import styles from '../../../css/Profile/SidePanel/SidePanelStyle.module.css'
 import Profile from '../../../assets/Profile/Profile.png'
 import Tarifs from '../../../assets/Profile/Tarifs.png'
 import Settings from '../../../assets/Profile/Settings.png'
 import Notifications from '../../../assets/Profile/Notifications.png'
 import Back from '../../../assets/Profile/Back.png'
 import Exit from '../../../assets/Profile/Exit.png'
-
 import { SidePanelLine } from './SidePanelLine'
 
 const SidePanelLineProps = [
@@ -19,14 +18,14 @@ const SidePanelLineProps = [
 
 export const SidePanel =(props)=>{
     const {SidePanelHeadH1, SidePanelHeadText} = props
-    return <div class="SidePanel">
+    return <div className={styles.SidePanel}>
 
-        <div class="SidePanelHead">
-            <h1 class="SidePanelHeadH1">{SidePanelHeadH1}</h1>
-            <p class="SidePanelHeadText">{SidePanelHeadText}</p>
+        <div className={styles.SidePanelHead}>
+            <h1 className={styles.SidePanelHeadH1}>{SidePanelHeadH1}</h1>
+            <p className={styles.SidePanelHeadText}>{SidePanelHeadText}</p>
         </div>
 
-        <div class="SidePanelContainer">
+        <div className={styles.SidePanelContainer}>
 
             {SidePanelLineProps.map((SidePanelInfo,key)=><SidePanelLine 
                                                     key={key}

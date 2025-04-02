@@ -1,4 +1,4 @@
-import '../../../css/Profile/MainPanel/MainPanelStyle.css'
+import styles from '../../../css/Profile/MainPanel/MainPanelStyle.module.css'
 import { MainPanelLine } from './MainPanelLine'
 
 const MainPanelLineProps = [
@@ -11,14 +11,14 @@ const MainPanelLineProps = [
 
 export const MainPanel =(props)=>{
     const {MainPanelHeadH1, MainPanelHeadText} = props
-    return <div class="MainPanel">
+    return <div className={styles.MainPanel}>
         
-        <div class="MainPanelHead">
-            <h1 class="MainPanelHeadH1">{MainPanelHeadH1}</h1>
-            <p class="MainPanelHeadText">{MainPanelHeadText}</p>
+        <div className={styles.MainPanelHead}>
+            <h1 className={styles.MainPanelHeadH1}>{MainPanelHeadH1}</h1>
+            <p className={styles.MainPanelHeadText}>{MainPanelHeadText}</p>
         </div>
 
-        <div class="SidePanelContainer">
+        <div className={styles.MainPanelContainer}>
 
             {MainPanelLineProps.map((MainPanelInfo,key)=><MainPanelLine 
                                                     key={key}
@@ -28,8 +28,8 @@ export const MainPanel =(props)=>{
             
         </div>
 
-        <div class="MainPanelButtonContainer">
-            <button>Сохранить изменения</button>
+        <div className={styles.MainPanelButtonContainer}>
+            <button className={styles.MainPanelButton}>Сохранить изменения</button>
         </div>
             
     </div>
