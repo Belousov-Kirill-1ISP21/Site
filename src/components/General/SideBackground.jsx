@@ -1,6 +1,4 @@
 import styles from '../../css/General/SideBackgroundStyle.module.css';
-import SideBackgroundImg from '../../assets/SideBackground/SideBackground.png'
-import SideDarkBackgroundImg from '../../assets/SideBackground/SideDarkBackground.png'
 
 export const SideBackground =(props)=>{
     const {isDark} = props;

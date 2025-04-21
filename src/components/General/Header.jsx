@@ -2,10 +2,13 @@ import styles from '../../css/General/HeaderStyle.module.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const Header =(props)=>{
-    const {isAuthenticated} = props;
+import { useAuth } from '../../scripts/AuthContext.js';
 
-    return <div className={styles.Header} id = "Header">
+export const Header = () => {
+    const { isAuthenticated} = useAuth();
+
+    return (
+        <div className={styles.Header}>
         
         <div className={styles.HeaderLeft}>
             
@@ -27,30 +30,25 @@ export const Header =(props)=>{
         </div>
 
         <div className={styles.HeaderRight}>
-            {(() => {
-                if (isAuthenticated) {
-                    return (
+                {isAuthenticated ? (
+                    <>
                         <Link to="/Profile" className={styles.HeaderRightLink}>
                             <button className={styles.HeaderRightButton}>Личный кабинет</button>
                         </Link>
-                    );
-                } 
-                else {
-                    return (
-                        <>
-                            <Link to="/SignUp" className={styles.HeaderRightLink}>
-                                <button className={styles.HeaderRightButton}>Регистрация</button>
-                            </Link>
-                            
-                            <Link to="/SignIn" className={styles.HeaderRightLink}>
-                                <button className={styles.HeaderRightButton}>Авторизация</button>
-                            </Link> 
-                        </>
-                    );
-                }
-            })()}
-            
+                        
+                    </>
+                ) : (
+                    <>
+                        <Link to="/SignUp" className={styles.HeaderRightLink}>
+                            <button className={styles.HeaderRightButton}>Регистрация</button>
+                        </Link>
+                        <Link to="/SignIn" className={styles.HeaderRightLink}>
+                            <button className={styles.HeaderRightButton}>Авторизация</button>
+                        </Link>
+                    </>
+                )}
         </div>
         
     </div>
+    )
 }

@@ -1,6 +1,6 @@
 import styles from '../css/Order/orderStyle.module.css'
 import { Header } from '../components/General/Header'
-import { OrderForm } from '../components/Order/OrderForm'
+import { OrderForm } from '../components/Order/OrderForm/OrderForm.jsx'
 import { SideBackground } from '../components/General/SideBackground'
 
 export const OrderPage = (props)=>{

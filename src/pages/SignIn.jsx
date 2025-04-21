@@ -1,6 +1,6 @@
 import styles from '../css/SignIn/signInStyle.module.css'
-import { AuthHeader } from '../components/General/AuthHeader'
-import { SignInForm } from '../components/SignIn/SignInForm'
+import { AuthHeader } from '../components/Authentication/General/AuthHeader'
+import { SignInForm } from '../components/Authentication/SignIn/SignInForm'
 import { SideBackground } from '../components/General/SideBackground'
 
 export const SignInPage = (props)=>{

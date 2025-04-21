@@ -4,7 +4,7 @@ import TwitterImg from "../../assets/Footer/Twitter.png";
 import VKImg from "../../assets/Footer/VK.png";
 import styles from '../../css/General/FooterStyle.module.css';
 import { Link } from 'react-router-dom';
-import { scrollToElement } from "../../functions/scrollToElement";
+import { scrollToElement } from "../../scripts/scrollToElement";
 
 export const Footer =(props)=>{
 
