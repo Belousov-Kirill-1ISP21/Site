@@ -8,7 +8,7 @@ import { Footer } from '../components/General/Footer'
 
 export const HomePage = (props)=>{
 
-    return <div className={styles.wrapper}>
+    return <div className={styles.Wrapper}>
         
         <Header/>
         <TitleBlock/>
