@@ -8,7 +8,7 @@ export const Header = () => {
     const { isAuthenticated} = useAuth();
 
     return (
-        <div className={styles.Header}>
+        <div className={styles.Header} id="Header">
         
         <div className={styles.HeaderLeft}>
             
