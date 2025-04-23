@@ -1,4 +1,4 @@
-import styles from '../css/SignIn/signInStyle.module.css'
+import styles from '../css/Authentication/SignIn/signInStyle.module.css'
 import { AuthHeader } from '../components/Authentication/General/AuthHeader'
 import { SignInForm } from '../components/Authentication/SignIn/SignInForm'
 import { SideBackground } from '../components/General/SideBackground'
